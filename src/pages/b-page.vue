@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <router-view></router-view>
+  <h3>这是b页面</h3>
 </template>
 
 <style>

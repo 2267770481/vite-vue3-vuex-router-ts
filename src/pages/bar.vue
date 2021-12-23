@@ -10,8 +10,8 @@
 
 <template>
   <h4>导航</h4>
-  <button @click="routerEvt('home')">home</button>
-  <button @click="routerEvt('other')">other</button>
+  <button @click="routerEvt('a')">home</button>
+  <button @click="routerEvt('b')">other</button>
   <hr />
 </template>
 

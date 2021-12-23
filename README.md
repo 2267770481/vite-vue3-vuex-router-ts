@@ -1,5 +1,13 @@
 # Vue 3 + Typescript + Vite
 
+### 路由
+```
+/home
+  vue3, vuex, router,echart(基础)等的使用
+/echarts
+  echarts的各种图表的详细使用
+```
+
 ### 文档地址
 ```
 项目根目录，笔记下边

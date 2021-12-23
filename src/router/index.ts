@@ -6,29 +6,38 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      component: LayOut,
-      redirect: '/home',
+      redirect: '/home'
+    },
+    {
+      path: '/charts',
+      name: 'charts',
+      component: ()=> import('@/components/charts/chart-constainer.vue')
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: ()=> import('@/pages/home.vue'),
       children: [
         {
-          path: '/home',
-          name: 'home',
-          component: ()=> import('@/pages/home.vue'),
+          path: '/a',
+          name: 'a',
+          component: ()=> import('@/pages/a-page.vue'),
           meta:  {
-            tiele: '首页',
+            tiele: 'a页面',
             icon: ''
           }
         },
         {
-          path: '/other',
-          name: 'other', 
-          component: ()=> import('@/pages/other.vue'),
-          meta: {
-            title: 'other',
+          path: '/b',
+          name: 'b',
+          component: ()=> import('@/pages/b-page.vue'),
+          meta:  {
+            tiele: 'b页面',
             icon: ''
           }
         }
       ]
-    }, 
+    }
   ]
 })
 
