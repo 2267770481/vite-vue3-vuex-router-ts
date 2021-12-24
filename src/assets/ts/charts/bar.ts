@@ -6,6 +6,19 @@ export const barChartOptions = () => {
 		legend: commonOption.legend,
 		tooltip: commonOption.tooltip,
 		toolbox: commonOption.toolbox,
+		// 区域缩放
+		dataZoom: [
+			{
+				type: 'slider',
+				xAxisIndex: 0,
+				start: 20,
+				end: 80,
+			},
+			{
+				type: 'inside',
+				yAxisIndex: 0,
+			}
+		],
 		xAxis: {
 				type: 'category',
 				data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']

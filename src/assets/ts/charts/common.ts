@@ -38,6 +38,7 @@ export const commonOption = {
       restore: {},
       dataView: {},
       saveAsImage:{},
+      dataZoom: {},
       magicType: {
         type: ['line', 'bar', 'stack']
     }

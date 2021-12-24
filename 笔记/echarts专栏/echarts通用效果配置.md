@@ -39,6 +39,7 @@ toolbox: {
     restore: {},  // 重置
     dataView: {}, // 数据视图
     saveAsImage:{}, // 保存图片
+    dataZoom: {}, // 区域缩放
     magicType: { // 多个图表之前切换
       type: ['line', 'bar', 'stack'] 
     }

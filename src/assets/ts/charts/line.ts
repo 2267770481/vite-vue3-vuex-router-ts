@@ -5,16 +5,28 @@ export const lineOptions = {
   legend: commonOption.legend,
   tooltip: commonOption.tooltip,
   toolbox: commonOption.toolbox,
+  // 网格 设置图标的位置及大小
+  grid: {
+    show: true, 
+    borderColor: 'blue',
+    borderWidth: 2,
+    left: 60,
+    top: 80,
+    width: 500,
+    height: 200,
+  },
   xAxis: {
     type: 'category',
     data: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
     // 紧挨边缘(与Y轴相交)
-    boundaryGap: false
+    boundaryGap: false,
+    position: 'top'
   },
   yAxis: {
     type: 'value',
     // 脱离0值比例(y轴坐标值不从0开始)
     scale: true,
+    position: 'right'
   },
   series: [
     {
