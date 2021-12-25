@@ -1,11 +1,11 @@
 <script setup lang='ts'>
 import { inject, onMounted, ref } from 'vue';
-import china from '@/assets/json/map-data/china.json';
+import china from '@/assets/json/map-data/china.json'
 import { mapOption } from '../../assets/ts/charts/map';
 
 const echarts: any= inject('echarts')
 echarts.registerMap('china', china);  // 注册的时候 别名要与引入的数据名保持一致，不然会有异常
-console.log(11111, china);
+// console.log(11111, china);
 
 const chart = ref(null)
 

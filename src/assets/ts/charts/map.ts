@@ -34,7 +34,7 @@ export const mapOption = {
     // 不同区域显示不同颜色
     {
       type: 'map',
-      geoIndex: 0,
+      geoIndex: 0,   // 将数据与第一个geo对象关联
       data:[
         { name: "上海", value: 432 },
         { name: "北京", value: 543 },
