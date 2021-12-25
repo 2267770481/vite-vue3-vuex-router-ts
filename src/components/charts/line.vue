@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { getCurrentInstance, onMounted, ref } from 'vue';
+import { inject, onMounted, ref } from 'vue';
 import { lineOptions } from '../../assets/ts/charts/line';
 
-const internalInstance = getCurrentInstance()
-const echarts = internalInstance?.appContext.config.globalProperties.$echarts
+const echarts: any = inject('echarts')
 
 const chart = ref(null)
 onMounted(async () => {

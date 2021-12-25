@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { getCurrentInstance, onMounted, ref } from 'vue';
+import { getCurrentInstance, onMounted, ref, inject } from 'vue';
 import { scatterOption } from '../../assets/ts/charts/scatter';
 
-const instance = getCurrentInstance()
-const echarts = instance?.appContext.config.globalProperties.$echarts
+const echarts:any = inject('echarts')
 
 const scatterChart = ref(null)
 

@@ -1,7 +1,14 @@
 <script setup lang="ts">
+import { getCurrentInstance, provide } from 'vue';
 import bar from './bar.vue';
 import lineVue from './line.vue';
 import scatterVue from './scatter.vue';
+import pieVue from './pie.vue';
+import mapVue from './map.vue';
+
+// 从全局属性获取echarts对象
+const instance = getCurrentInstance()
+provide('echarts', instance?.appContext.config.globalProperties.$echarts)
 
 </script>
 
@@ -13,7 +20,12 @@ import scatterVue from './scatter.vue';
 <hr>
 
 <scatterVue />
+<hr>
 
+<pieVue />
+<hr>
+
+<mapVue />
 
 </template>  
 <style>

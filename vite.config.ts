@@ -20,6 +20,7 @@ export default ({command, mode}) => {
         '/api': {
           // target: 'http://jsonplaceholder.typicode.com',
           target: loadEnv(mode, process.cwd()).VITE_APP_BASE_URL,  // 从配置文件中读取
+          ws: true, 
           changeOrigin: true, // 跨域配置
           rewrite: (path) => path.replace(/^\/api/, '')
         },

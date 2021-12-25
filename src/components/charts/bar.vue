@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import { getCurrentInstance, onMounted, ref } from 'vue';
+import { getCurrentInstance, onMounted, ref, inject } from 'vue';
 import { barChartOptions } from '@/assets/ts/charts/bar';
 
-// 从全局属性获取echarts对象
-const internalInstance = getCurrentInstance()
-const echarts = internalInstance?.appContext.config.globalProperties.$echarts
+const echarts:any = inject('echarts')
 
 const chart = ref(null)
 
