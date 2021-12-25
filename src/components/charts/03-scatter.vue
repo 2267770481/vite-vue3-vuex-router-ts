@@ -2,11 +2,11 @@
 import { getCurrentInstance, onMounted, ref, inject } from 'vue';
 import { scatterOption } from '../../assets/ts/charts/scatter';
 
-const echarts:any = inject('echarts')
+const echarts: any = inject('echarts')
 
 const scatterChart = ref(null)
 
-onMounted(async ()=>{
+onMounted(async () => {
   const scatter = echarts.init(scatterChart.value)
   scatter.setOption(scatterOption)
   window.onresize = () => scatter.resize()
@@ -15,7 +15,7 @@ onMounted(async ()=>{
 </script>
 
 <template>
-<div div class="box" ref="scatterChart"></div>
+  <div div class="box" ref="scatterChart"></div>
 </template>
 
 <style>

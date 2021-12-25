@@ -7,6 +7,7 @@ import pieVue from './04-pie.vue';
 import mapVue from './05-map.vue';
 import radarVue from './06-radar.vue';
 import gaugeVue from './07-gauge.vue';
+import donghuaVue from './08-donghua.vue';
 
 // 从全局属性获取echarts对象
 const instance = getCurrentInstance()
@@ -34,6 +35,9 @@ provide('echarts', instance?.appContext.config.globalProperties.$echarts)
 <hr>
 
 <gaugeVue />
+<hr>
+
+<donghuaVue />
 
 </template>  
 <style>
