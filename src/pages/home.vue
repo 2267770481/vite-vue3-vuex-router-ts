@@ -54,6 +54,6 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .text-color {
-  color: $color-primary;  // $color-primary 是从定义的全局样式中读取 在assets/styles/global.scss中
+  color: $color-primary;  // $color-primary 是从定义的全局样式中读取 在assets/styles/global.scss中定义，并在vite.config.ts中引入
 }
 </style>
