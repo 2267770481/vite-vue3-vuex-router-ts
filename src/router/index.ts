@@ -9,6 +9,11 @@ const router = createRouter({
       redirect: '/home'
     },
     {
+      path: '/:catchAll(.*)',
+      name: '404',
+      component: () => import('@/components/404.vue')
+    },
+    {
       path: '/charts',
       name: 'charts',
       component: ()=> import('@/components/charts/chart-constainer.vue')
